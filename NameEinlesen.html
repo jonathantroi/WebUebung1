@@ -8,14 +8,11 @@
 	
 	<body onload="checkCookie()">
 
-	<script src="javaScript.js"></script>
-	<p>HalloSeckl</p>
+	<h1>1. Uebung Informatik</h1>
 
-	<div><!-- Übung 1 -->
-		<input Id="input" type="String" name="Your Name" required value="Your Name">
-		<button name="Welcome" onclick="printName()">Welcome</button>
-		<p Id="para"></p>
-	</div>
+	<script src="javaScript.js"></script>
+
+
 
 	<hr>
 
@@ -26,6 +23,12 @@
 	</script>
 
 	<hr>
+
+		<div><!-- Übung 1 -->
+		<input Id="input" type="String" name="Your Name" required value="Your Name">
+		<button name="Welcome" onclick="printName()">Welcome</button>
+		<p Id="para"></p>
+	</div>
 
 	<div Id="backgroundChanger">
 		<form Id="radioButtonForm">
@@ -51,24 +54,6 @@
 
 	<div>
 		<table>
-			<tr>
-				<td><input Id="firstNum" type="number"></td>
-				<td>
-					<select Id="operator">
-						<option value="+">+</option>
-						<option value="-">-</option>
-						<option value="*">*</option>
-						<option value="/">/</option>
-					</select>
-				</td>
-				<td><input Id="secondNum" type="number"></td>
-				<td><button Id="enter" onclick="evaluateCalc()">=</td>
-				<td><p Id="ausgabe"></p></td>
-			</tr>
-		</table>
-
-
-		<table>
 				<tr>
 					<td><button onclick="addNumber(1)">1</td>
 					<td><button onclick="addNumber(2)">2</td>
@@ -90,16 +75,6 @@
 					<td><button onclick="addNumber('*')">*</td>
 					<td><button onclick="addNumber('/')">/</td>
 				</tr>
-				<tr>
-					<select Id="op">
-						<option value="+">+</option>
-						<option value="-">-</option>
-						<option value="*">*</option>
-						<option value="/">/</option>
-					</select>
-					<input type="checkbox" Id="opBox" name="opSwap" value="YES" onclick="setTrue()">
-					<label for="opBox">Operator</label>
-				</tr>
 				<button Id="enter" onclick="calc()">=
 		</table>
 		<input Id="calcInput">
@@ -109,8 +84,10 @@
 	<hr>
 
 	<div class="slideshowContainer">
-		<img class="mySlides" src="index.jpg" style="width:100%;">
-		<!--<img class="mySlides" src="tardis.jpeg" style="width:100%;">-->
+		<img class="mySlides" src="slidePictures\firstPic.jpg" style="width:100%;">
+		<img class="mySlides" src="slidePictures\p1.jpg" style="width:100%; display:none;">
+		<img class="mySlides" src="slidePictures\p2.jpg" style="width:100%; display:none;">
+		<img class="mySlides" src="slidePictures\p3.jpg" style="width:100%; display:none;">
 
 		<button class="left" onclick="plusDivs(-1)"><</button>
 		<button class="right" onclick="plusDivs(1)">></button>
