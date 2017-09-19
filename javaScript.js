@@ -1,7 +1,7 @@
 function printName(){
-	var input = document.getElementById("input");
+	var input = document.getElementById("nameInput");
 	if(input.checkValidity() == true){
-		document.getElementById("para").innerHTML = "Welcome " + document.getElementById("input").value;
+		document.getElementById("nameOutput").innerHTML = "Welcome " + document.getElementById("nameInput").value;
 	}
 }
 
@@ -49,80 +49,24 @@ function change(colorChanger){
 }
 
 
-var param = false;
-var par1 = "";
-var par2 = "";
 var calculation = "";
 
 function calc(){
-	var operation = document.getElementById("op").value;
-	var first = parseInt(par1);
-	var second = parseInt(par2);
-
-
-	switch(operation){
-		case "+":
-			document.getElementById("calcOutput").innerHTML = first + second;
-		break;
-		case "-":
-			document.getElementById("calcOutput").innerHTML = first - second;
-		break;
-		case "*":
-			document.getElementById("calcOutput").innerHTML = first * second;
-		break;
-		case "/":
-			document.getElementById("calcOutput").innerHTML = first / second;
-		break;
-		default:
-		break;
-	}
-
-	par1 = "";
-	par2 = "";
-
 	document.getElementById("calcOutput").innerHTML = Math.floor(eval(calculation));
-	calculation = "";
+	document.getElementById("calcOutput").value = Math.floor(eval(calculation));
+	calculation = document.getElementById("calcOutput").value;
 }
 
 function addNumber(num){
 	calculation += num;
-	if(document.getElementById("opBox").checked == false){
-		par1 += num;
-		document.getElementById("calcOutput").innerHTML = par1;
-
-	}else{
-		par2 += num;
-		document.getElementById("calcOutput").innerHTML = par1;
-	}
-
+	document.getElementById("calcOutput").innerHTML = calculation;
 }
 
-function setTrue(status){
-	calcCheck = true;
+function delCalculation(){
+	calculation = "";
+	document.getElementById("calcOutput").innerHTML = "";
 }
-//Math.floor(eval(zahl))
-function evaluateCalc(){
-	var first = parseInt(document.getElementById("firstNum").value);
-	var second = parseInt(document.getElementById("secondNum").value);
-	var operation = document.getElementById("operator").value;
 
-	switch(operation){
-		case "+":
-			document.getElementById("ausgabe").innerHTML = first + second;
-		break;
-		case "-":
-			document.getElementById("ausgabe").innerHTML = first - second;
-		break;
-		case "*":
-			document.getElementById("ausgabe").innerHTML = first * second;
-		break;
-		case "/":
-			document.getElementById("ausgabe").innerHTML = first / second;
-		break;
-		default:
-		break;
-	}
-}
 
 var slideIndex = 1;
 

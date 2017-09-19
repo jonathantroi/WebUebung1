@@ -8,35 +8,34 @@
 	
 	<body onload="checkCookie()">
 
-	<h1>1. Uebung Informatik</h1>
-
 	<script src="javaScript.js"></script>
 
-
+	<div Id="headerContainer">
+		<h1>1. Uebung Informatik</h1>
+	</div>
 
 	<hr>
 
 	<p Id="zeit"></p>
-
 	<script type="text/javascript">
 		document.getElementById("zeit").innerHTML = Date();
 	</script>
 
 	<hr>
 
-		<div><!-- Übung 1 -->
-		<input Id="input" type="String" name="Your Name" required value="Your Name">
+	<div Id="nameInputContainer"><!-- Übung 1 -->
+		<input Id="nameInput" type="String" name="Your Name" required value="Your Name">
 		<button name="Welcome" onclick="printName()">Welcome</button>
-		<p Id="para"></p>
+		<p Id="nameOutput"></p>
 	</div>
 
 	<div Id="backgroundChanger">
 		<form Id="radioButtonForm">
-			<p>Wechseln sie die Farbe</p>
 			<fieldset>
 			<!--name bezeichnet die Gruppe der die Radiobuttons angehören.
 			Sie müssen alle derselben Gruppe angehören, damit man immer nur
 			einen auswählen kann -->
+				<p>Wechseln sie die Farbe</p>
 				<input type="radio" Id="redRadio" name="colorChanger" value="RED" onclick="changeColor()">
 				<label for="redRadio">Red</label><br>
 				<input type="radio" Id="greenRadio" name="colorChanger" value="Green" onclick="changeColor()">
@@ -52,19 +51,24 @@
 
 	<hr>
 
-	<div>
-		<table>
+	<div Id="calculator">
+			
+			
+		<table Id="calcTable">
 				<tr>
+					<td><button style="display:none;"></td>
 					<td><button onclick="addNumber(1)">1</td>
 					<td><button onclick="addNumber(2)">2</td>
 					<td><button onclick="addNumber(3)">3</td>
 				</tr>
 				<tr>
+					<td><button style="display:none;"></td>
 					<td><button onclick="addNumber(4)">4</td>
 					<td><button onclick="addNumber(5)">5</td>
 					<td><button onclick="addNumber(6)">6</td>
 				</tr>
 				<tr>
+					<td><button style="display:none;"></td>
 					<td><button onclick="addNumber(7)">7</td>
 					<td><button onclick="addNumber(8)">8</td>
 					<td><button onclick="addNumber(9)">9</td>
@@ -72,12 +76,18 @@
 				<tr>
 					<td><button onclick="addNumber('+')">+</td>
 					<td><button onclick="addNumber('-')">-</td>
+					<td><button onclick="addNumber(0)">0</td>
 					<td><button onclick="addNumber('*')">*</td>
 					<td><button onclick="addNumber('/')">/</td>
 				</tr>
-				<button Id="enter" onclick="calc()">=
+				<tr Id="calc5">
+					<td><button style="display:none;"></td>
+					<td><button Id="ce" onclick="delCalculation()">CE</td>
+					<td><button Id="enter" onclick="calc()">=</td>
+				</tr>
+				
 		</table>
-		<input Id="calcInput">
+
 		<p id="calcOutput"></p>
 	</div>
 

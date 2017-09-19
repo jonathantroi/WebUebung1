@@ -2,3 +2,42 @@
 	text-align: center;
 	font-size: 20px;
 }
+
+#headerContainer{
+	display: flex;
+
+}
+
+h1{
+	margin: auto;
+	width:500px;
+	text-align: center;
+}
+
+#nameInputContainer{
+	height:50px;
+	display: flex;
+	align-content: center;
+}
+
+#calculator{
+	display:flex;
+	/*align-content: center;
+	align-items: center;*/
+	flex-direction: ttb;
+}
+
+#calcTable{
+	margin:auto;
+	align-content: center;
+	display:flex;
+}
+
+#calcOutput{
+	width:500px;
+	height:40px;
+	border: 1px solid black;
+	margin:auto;
+	text-align: center;
+	padding-top: 20px; 
+}
