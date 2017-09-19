@@ -6,10 +6,10 @@
 		<title>Name Einlesen</title>
 	</head>
 	
-	<body>
+	<body onload="checkCookie()">
 
 	<script src="javaScript.js"></script>
-
+	<p>HalloSeckl</p>
 
 	<div><!-- Übung 1 -->
 		<input Id="input" type="String" name="Your Name" required value="Your Name">
@@ -17,11 +17,15 @@
 		<p Id="para"></p>
 	</div>
 
+	<hr>
+
 	<p Id="zeit"></p>
 
 	<script type="text/javascript">
 		document.getElementById("zeit").innerHTML = Date();
 	</script>
+
+	<hr>
 
 	<div Id="backgroundChanger">
 		<form Id="radioButtonForm">
@@ -41,69 +45,90 @@
 			<label for="yesBox">Swap Colors</label>
 		</form>
 		
-		<div>
-			<table>
-				<tr>
-					<td><input Id="firstNum" type="number"></td>
-					<td>
-						<select Id="operator">
-							<option value="+">+</option>
-							<option value="-">-</option>
-							<option value="*">*</option>
-							<option value="/">/</option>
-						</select>
-					</td>
-					<td><input Id="secondNum" type="number"></td>
-					<td><button Id="enter" onclick="evaluateCalc()">=</td>
-					<td><p Id="ausgabe"></p></td>
-				</tr>
-			</table>
-
-
-			<table>
-				<output>Hallo</output>
-					<tr>
-						<td><button onclick="addNumber(1)">1</td>
-						<td><button onclick="addNumber(2)">2</td>
-						<td><button onclick="addNumber(3)">3</td>
-					</tr>
-					<tr>
-						<td><button onclick="addNumber(4)">4</td>
-						<td><button onclick="addNumber(5)">5</td>
-						<td><button onclick="addNumber(6)">6</td>
-					</tr>
-					<tr>
-						<td><button onclick="addNumber(7)">7</td>
-						<td><button onclick="addNumber(8)">8</td>
-						<td><button onclick="addNumber(9)">9</td>
-					</tr>
-					<tr>
-						<select Id="op">
-							<option value="+">+</option>
-							<option value="-">-</option>
-							<option value="*">*</option>
-							<option value="/">/</option>
-						</select>
-						<input type="checkbox" Id="opBox" name="opSwap" value="YES" onclick="setTrue()">
-						<label for="opBox">Operator</label>
-					</tr>
-					<button Id="enter" onclick="calc()">=
-			</table>
-			<p id="calcOutput"></p>
-			<p id="calcOutput2"></p>
-			<p id="calcOutput3"></p>
-		</div>	
-
 	</div>
+
+	<hr>
 
 	<div>
-		<img class="mySlides" src="index.jpg" style="width:100%;">
-		<img class="mySlides" src="tardis.jpg" style="width:100%;">
+		<table>
+			<tr>
+				<td><input Id="firstNum" type="number"></td>
+				<td>
+					<select Id="operator">
+						<option value="+">+</option>
+						<option value="-">-</option>
+						<option value="*">*</option>
+						<option value="/">/</option>
+					</select>
+				</td>
+				<td><input Id="secondNum" type="number"></td>
+				<td><button Id="enter" onclick="evaluateCalc()">=</td>
+				<td><p Id="ausgabe"></p></td>
+			</tr>
+		</table>
 
-		<button onclick="showDivs(-1)"><
-		<button onclick="showDivs(1)">>
+
+		<table>
+				<tr>
+					<td><button onclick="addNumber(1)">1</td>
+					<td><button onclick="addNumber(2)">2</td>
+					<td><button onclick="addNumber(3)">3</td>
+				</tr>
+				<tr>
+					<td><button onclick="addNumber(4)">4</td>
+					<td><button onclick="addNumber(5)">5</td>
+					<td><button onclick="addNumber(6)">6</td>
+				</tr>
+				<tr>
+					<td><button onclick="addNumber(7)">7</td>
+					<td><button onclick="addNumber(8)">8</td>
+					<td><button onclick="addNumber(9)">9</td>
+				</tr>
+				<tr>
+					<td><button onclick="addNumber('+')">+</td>
+					<td><button onclick="addNumber('-')">-</td>
+					<td><button onclick="addNumber('*')">*</td>
+					<td><button onclick="addNumber('/')">/</td>
+				</tr>
+				<tr>
+					<select Id="op">
+						<option value="+">+</option>
+						<option value="-">-</option>
+						<option value="*">*</option>
+						<option value="/">/</option>
+					</select>
+					<input type="checkbox" Id="opBox" name="opSwap" value="YES" onclick="setTrue()">
+					<label for="opBox">Operator</label>
+				</tr>
+				<button Id="enter" onclick="calc()">=
+		</table>
+		<input Id="calcInput">
+		<p id="calcOutput"></p>
 	</div>
 
+	<hr>
+
+	<div class="slideshowContainer">
+		<img class="mySlides" src="index.jpg" style="width:100%;">
+		<!--<img class="mySlides" src="tardis.jpeg" style="width:100%;">-->
+
+		<button class="left" onclick="plusDivs(-1)"><</button>
+		<button class="right" onclick="plusDivs(1)">></button>
+	</div>
+
+	<button onclick="getAllParagraphs()">Show all Paragraphs</button>
+	<hr>
+	<a target="_blank" href="https://www.google.it/?gfe_rd=cr&dcr=0&ei=Icq_WfvNCNGCsAH1gKXgBw">Open new Tab</a>
+	<hr>
+	<button onclick="document.cookie='username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'">Delete Cookie</button>
+	<hr>
+	<button onclick="getBrowserVersionAndLanguage()">Browser</button>
+	<p Id="browser"></p>
+
+	<hr>
+
+	<p Id="ajaxData"></p>
+	<button onclick="loadAjaxData()">Load Ajax
 		
 	</body>
 </html>
