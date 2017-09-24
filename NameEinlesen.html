@@ -14,20 +14,22 @@
 		<h1>1. Uebung Informatik</h1>
 	</div>
 
-	<hr>
-
-	<p Id="zeit"></p>
-	<script type="text/javascript">
-		document.getElementById("zeit").innerHTML = Date();
-	</script>
-
-	<hr>
+	<h2>1. Aufgabe</h2>
 
 	<div Id="nameInputContainer"><!-- Übung 1 -->
 		<input Id="nameInput" type="String" name="Your Name" required value="Your Name">
 		<button name="Welcome" onclick="printName()">Welcome</button>
 		<p Id="nameOutput"></p>
 	</div>
+
+	<h2>2. Aufgabe</h2>
+
+	<p Id="zeit"></p>
+	<script type="text/javascript">
+		document.getElementById("zeit").innerHTML = Date();
+	</script>
+
+	<h2>3-4. Aufgabe</h2>
 
 	<div Id="backgroundChanger">
 		<form Id="radioButtonForm">
@@ -43,47 +45,42 @@
 				<input type="radio" Id="blueRadio" name="colorChanger" value="Blue" onclick="changeColor()">
 				<label for="blueRadio">Blue</label>
 			</fieldset>
-			<input type="checkbox" Id="yesBox" name="colorSwap" value="YES" onclick="colorLoop()">
+			<input type="checkbox" Id="yesBox" name="colorSwap" value="YES" onclick="clearColor()">
 			<label for="yesBox">Swap Colors</label>
 		</form>
 		
 	</div>
 
-	<hr>
+	<h2>5. Aufgabe</h2>
 
 	<div Id="calculator">
 			
-			
 		<table Id="calcTable">
-				<tr>
-					<td><button style="display:none;"></td>
-					<td><button onclick="addNumber(1)">1</td>
-					<td><button onclick="addNumber(2)">2</td>
-					<td><button onclick="addNumber(3)">3</td>
+				<tr class="numRow">
+					<td><button class="numberButton" onclick="addNumber(1)">1</td>
+					<td><button class="numberButton" onclick="addNumber(2)">2</td>
+					<td><button class="numberButton" onclick="addNumber(3)">3</td>
+				</tr>
+				<tr class="numRow">
+					<td><button class="numberButton" onclick="addNumber(4)">4</td>
+					<td><button class="numberButton" onclick="addNumber(5)">5</td>
+					<td><button class="numberButton" onclick="addNumber(6)">6</td>
+				</tr>
+				<tr class="numRow">
+					<td><button class="numberButton" onclick="addNumber(7)">7</td>
+					<td><button class="numberButton" onclick="addNumber(8)">8</td>
+					<td><button class="numberButton" onclick="addNumber(9)">9</td>
 				</tr>
 				<tr>
-					<td><button style="display:none;"></td>
-					<td><button onclick="addNumber(4)">4</td>
-					<td><button onclick="addNumber(5)">5</td>
-					<td><button onclick="addNumber(6)">6</td>
+					<td><button class="operationButton" onclick="addNumber('+')">+</td>
+					<td><button class="operationButton" onclick="addNumber('-')">-</td>
+					<td><button class="numberButton" onclick="addNumber(0)">0</td>
+					<td><button class="operationButton" onclick="addNumber('*')">*</td>
+					<td><button class="operationButton" onclick="addNumber('/')">/</td>
 				</tr>
 				<tr>
-					<td><button style="display:none;"></td>
-					<td><button onclick="addNumber(7)">7</td>
-					<td><button onclick="addNumber(8)">8</td>
-					<td><button onclick="addNumber(9)">9</td>
-				</tr>
-				<tr>
-					<td><button onclick="addNumber('+')">+</td>
-					<td><button onclick="addNumber('-')">-</td>
-					<td><button onclick="addNumber(0)">0</td>
-					<td><button onclick="addNumber('*')">*</td>
-					<td><button onclick="addNumber('/')">/</td>
-				</tr>
-				<tr Id="calc5">
-					<td><button style="display:none;"></td>
-					<td><button Id="ce" onclick="delCalculation()">CE</td>
-					<td><button Id="enter" onclick="calc()">=</td>
+					<td class="specialButton"><button Id="ce" onclick="delCalculation()">CE</td>
+					<td class="specialButton"><button Id="enter" onclick="calc()">=</td>
 				</tr>
 				
 		</table>
@@ -91,31 +88,41 @@
 		<p id="calcOutput"></p>
 	</div>
 
-	<hr>
+	<h2>6. Aufgabe</h2>
 
 	<div class="slideshowContainer">
-		<img class="mySlides" src="slidePictures\firstPic.jpg" style="width:100%;">
-		<img class="mySlides" src="slidePictures\p1.jpg" style="width:100%; display:none;">
-		<img class="mySlides" src="slidePictures\p2.jpg" style="width:100%; display:none;">
-		<img class="mySlides" src="slidePictures\p3.jpg" style="width:100%; display:none;">
+		<img class="mySlides" src="slidePictures\firstPic.jpg" alt="">
+		<img class="mySlides" src="slidePictures\p1.jpg" alt="" style="display:none;">
+		<img class="mySlides" src="slidePictures\p2.jpg" alt="" style="display:none;">
+		<img class="mySlides" src="slidePictures\p3.jpg" alt="" style="display:none;">
 
-		<button class="left" onclick="plusDivs(-1)"><</button>
-		<button class="right" onclick="plusDivs(1)">></button>
+		<button class="slidesLeft" onclick="plusDivs(-1)">&#8788;</button>
+		<button class="slidesRight" onclick="plusDivs(1)">&#8789;</button>
 	</div>
 
-	<button onclick="getAllParagraphs()">Show all Paragraphs</button>
-	<hr>
-	<a target="_blank" href="https://www.google.it/?gfe_rd=cr&dcr=0&ei=Icq_WfvNCNGCsAH1gKXgBw">Open new Tab</a>
-	<hr>
-	<button onclick="document.cookie='username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'">Delete Cookie</button>
-	<hr>
-	<button onclick="getBrowserVersionAndLanguage()">Browser</button>
-	<p Id="browser"></p>
+	<div Id="funcButtons">
+		<h2>7. Aufgabe</h2>
 
-	<hr>
+		<button Id="paraButton" style="width:100px; justify-content: center;" onclick="getAllParagraphs()">Show all Paragraphs</button>
+		<p Id="allParagraphs"></p>
 
-	<p Id="ajaxData"></p>
-	<button onclick="loadAjaxData()">Load Ajax
-		
+		<h2>8. Aufgabe</h2>
+		<a target="_blank" href="https://www.google.it/?gfe_rd=cr&dcr=0&ei=Icq_WfvNCNGCsAH1gKXgBw">Open new Tab</a>
+
+		<h2>9. Aufgabe</h2>
+		<button onclick="document.cookie='username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'">Delete Cookie</button>
+
+		<h2>10. Aufgabe</h2>
+		<button onclick="getBrowserVersionAndLanguage()">Browser</button>
+		<p Id="browser"></p>
+
+
+		<h2>11. Aufgabe</h2>
+			<p Id="ajaxData"></p>
+		<button onclick="loadAjaxData()">Load Ajax
+	</div>
+
+	
+
 	</body>
 </html>

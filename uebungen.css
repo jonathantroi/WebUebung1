@@ -1,11 +1,5 @@
-#zeit{
-	text-align: center;
-	font-size: 20px;
-}
-
-#headerContainer{
-	display: flex;
-
+body{
+	font-family: "Roboto", sans-serif;
 }
 
 h1{
@@ -14,30 +8,130 @@ h1{
 	text-align: center;
 }
 
+h2{
+	margin: auto;
+	width:500px;
+	text-align: center;
+}
+
+#zeit{
+	text-align: center;
+	font-size: 20px;
+}
+
 #nameInputContainer{
 	height:50px;
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+#backgroundChanger{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#radioButtonForm{
+	width:40%;
 	display: flex;
-	align-content: center;
+	flex-direction: column;
+	align-items: center;
 }
 
 #calculator{
 	display:flex;
-	/*align-content: center;
-	align-items: center;*/
-	flex-direction: ttb;
+	flex-direction: column-reverse;
+	align-items: center;
+	justify-content: center;
 }
 
-#calcTable{
-	margin:auto;
-	align-content: center;
+.numberButton{
+	background-color: lightblue;
+	border:none;
+	height:60px;
+	width:40px;
+}
+
+.numberButton:hover{
+	background-color: #66ccff;
+}
+
+.operationButton{
+	background-color: orange;
+	border:none;
+	height:60px;
+	width:40px;
+}
+
+.operationButton:hover{
+	background-color: #ff8000;
+
+}
+
+.specialButton{
+	background-color: lightgreen;
+	border:none;
+	height:60px;
+	width:40px;	
+}
+
+.specialButton:hover{
+	background-color: #47d147;
+}
+
+tbody{
 	display:flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #calcOutput{
-	width:500px;
+	width:200px;
 	height:40px;
 	border: 1px solid black;
 	margin:auto;
+	padding: auto;
 	text-align: center;
-	padding-top: 20px; 
+	font-size: 25px; 
+}
+
+.slideshowContainer{
+	display:flex;
+	flex-direction: row;
+	max-width: 1000px;
+	margin:auto;
+	position:relative;
+}
+
+.mySlides{
+	position:relative;
+	max-width:100%;
+	justify-content: center;
+}
+
+.slidesLeft, .slidesRight{
+	position:absolute;
+	height:100%;
+	width:80px;
+	background-color: rgba(255, 0, 0, 0.2);
+	border:none;
+	font-size: 50px;
+	color:white;
+}
+
+.slidesRight{
+	right:0;
+}
+
+
+.slidesLeft:hover, .slidesRight:hover{
+	background-color: rgba(255, 0, 0, 0.5);
+}
+
+#funcButtons{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
 }
